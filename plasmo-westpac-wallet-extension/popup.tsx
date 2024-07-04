@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Button } from '@westpac/ui/button';
+import { Button, Input } from '@westpac/ui';
+import icon from './assets/icon.png';
 
 function IndexPopup() {
   const [data, setData] = useState("")
@@ -8,19 +9,23 @@ function IndexPopup() {
   return (
     <div
       style={{
-        padding: 16
-      }}>
-      <h2>
-        Westpac Browser Wallet
-      </h2>
-      <h3>Unlock Wallet</h3>
-      <section>
-        <div className="space-x-4 mb-2">
-          <Button look="primary">Pay here</Button>
+        margin:0,
+        padding:8, 
+        backgroundColor:"#DA1710"
+        }}>
+        <div>
+          <img src={icon} width={'200px'} height={'200px'}/>
         </div>
-      </section>
-      
-      <input onChange={(e) => setData(e.target.value)} value={data} />
+      <h3>
+        Westpac Browser Wallet
+      </h3>
+      <Input
+          placeholder="Pin"
+          type="password"
+          value={data}
+          onChange={(e) => setData(e.target.value)}
+        />
+      {/*<input onChange={(e) => setData(e.target.value)} value={data} />*/}
       
     </div>
   )
