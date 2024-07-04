@@ -15,7 +15,6 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
 
   return (
     <div style={{ marginBottom: 16 }}>
-      <h2>Login</h2>
       <Input
         placeholder="Pin"
         type="password"
@@ -23,6 +22,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         onChange={(e) => setData(e.target.value)}
         style={{ marginBottom: 16, width: '100%' }}
       />
+      <Button color="#181B25" look="primary" onClick={handleLoginClick}>Unlock</Button>
     </div>
   );
 }
