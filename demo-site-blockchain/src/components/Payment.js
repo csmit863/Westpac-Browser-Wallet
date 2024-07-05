@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Payment.css'; // Import your CSS file for styling
 
 const Payment = () => {
@@ -14,10 +15,15 @@ const Payment = () => {
             <h2>Choose Payment Method</h2>
       </div>
       <div className="payment-header2">
-            <button className="digital-wallet-button">Pay with Digital Wallet</button>
+            <Link to="/confirm" className="digital-wallet-button">Pay with Digital Wallet</Link>
+      </div>
+      <div className="payment-header2">
+            <button className="digital-wallet-button">Pay with PayPal</button>
+      </div>
+      <div className="payment-header2">
+            <button className="digital-wallet-button">Pay with Credit or Debit Card</button>
       </div>
       <div className="payment-form">
-        <button className= "digital-wallet-button1">Payment Details</button>
         <form onSubmit={handleSubmit}>
           <label htmlFor="cardNumber">Card Number:</label>
           <input type="text" id="cardNumber" name="cardNumber" required />
