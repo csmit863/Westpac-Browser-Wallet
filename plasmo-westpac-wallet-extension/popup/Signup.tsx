@@ -35,19 +35,20 @@ const Signup: React.FC<SignupProps> = ({ onSignup }) => {
       <h2>Sign Up - Import Wallet</h2>
       <div>
         <label>
-          <Button>Import using mneomnic phrase</Button>
+          <Button>Import using passkey (recommended)</Button>
         </label>
-      </div>
+      </div><br/>
       <div>
         <label>
           <Button>Import using mneomnic phrase</Button>
         </label>
-      </div>
+      </div><br/>
       <div>
         <label>
-          <Button>Import using passkey</Button>
+          <Button>Import using raw private key</Button>
         </label>
       </div>
+      
     </div>
   );
 }
