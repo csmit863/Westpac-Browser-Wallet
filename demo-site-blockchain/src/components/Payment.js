@@ -10,8 +10,14 @@ const Payment = () => {
 
   return (
     <div className="payment-container">
+      <div className="payment-header">
+            <h2>Choose Payment Method</h2>
+      </div>
+      <div className="payment-header2">
+            <button className="digital-wallet-button">Pay with Digital Wallet</button>
+      </div>
       <div className="payment-form">
-        <h2>Payment Details</h2>
+        <button className= "digital-wallet-button1">Payment Details</button>
         <form onSubmit={handleSubmit}>
           <label htmlFor="cardNumber">Card Number:</label>
           <input type="text" id="cardNumber" name="cardNumber" required />

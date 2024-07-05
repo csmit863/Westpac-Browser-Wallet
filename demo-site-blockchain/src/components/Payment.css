@@ -2,47 +2,117 @@
 
 .payment-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: max-content;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  .payment-header {
+    width: 400px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box-shadow */
+    border-radius: 8px;
+    padding-left: 20px;
+  }
+
+  .payment-header2 {
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box-shadow */
+    border-radius: 8px;
+    padding-left: 20px;
+  }
+  
+  .digital-wallet-button {
+    background-color: #1F1C4F; /* Green color for digital wallet button */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .digital-wallet-button:hover {
+    background-color: #0f0d30; /* Darker green color on hover */
+  }
+
+  .digital-wallet-button1 {
+    background-color: #1F1C4F; /* Green color for digital wallet button */
+    color: #ffffff; /* White text color */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .digital-wallet-button1:hover {
+    background-color: #0f0d30; /* Darker green color on hover */
   }
   
   .payment-form {
     width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box-shadow */
+    border-radius: 8px;
+    padding-left: 20px;
   }
   
   .payment-form h2 {
     margin-bottom: 20px;
     text-align: center;
+    color: #1F1C4F; /* Dark text color */
   }
   
   .payment-form label {
     display: block;
     margin-bottom: 10px;
+    color: #495057; /* Gray text color */
   }
   
   .payment-form input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .payment-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 4px;
     font-size: 16px;
-    border-radius: 5px;
+    padding-left: 1px;
   }
   
-  .payment-button:hover {
-    background-color: #0056b3;
+  .payment-form input:focus {
+    outline: none;
+    border-color: #80bdff; /* Focus border color */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus box shadow */
+  }
+  
+  .payment-form button.payment-button {
+    width: 100%;
+    background-color: #1F1C4F; /* Primary button color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .payment-form button.payment-button:hover {
+    background-color: #0f0d30; /* Darker color on hover */
   }
   
