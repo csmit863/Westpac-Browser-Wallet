@@ -18,7 +18,7 @@ function IndexPopup() {
     setHasAccount(true); // Simulate successful login
 
     // Simulate fetching user balance
-    setBalance(240); // Example balance
+    setBalance(243.5); // Example balance
     setIsLoggedIn(true); // Set login status to true
   };
 

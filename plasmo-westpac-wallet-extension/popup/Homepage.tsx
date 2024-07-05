@@ -12,12 +12,13 @@ interface Transaction {
   amount: number;
   date: string;
   description: string;
+  hash: string;
 }
 
 const HomePage: React.FC<HomePageProps> = ({ balance, onLogout }) => {
   const [txHistory, setTxHistory] = useState<Transaction[]>([
-    { id: '1', amount: 100, date: '2024-07-01', description: 'Payment received' },
-    { id: '2', amount: -50, date: '2024-07-02', description: 'Payment sent' },
+    { id: '1', amount: 100, date: '2024-07-01', description: 'Payment received', hash: '0x4a...1d10'},
+    { id: '2', amount: -50, date: '2024-07-02', description: 'Payment sent', hash: '0x60...1f35'},
   ]);
 
   return (
@@ -35,6 +36,7 @@ const HomePage: React.FC<HomePageProps> = ({ balance, onLogout }) => {
               <th style={{ border: '1px solid #ddd', padding: '8px' }}>Date</th>
               <th style={{ border: '1px solid #ddd', padding: '8px' }}>Amount</th>
               <th style={{ border: '1px solid #ddd', padding: '8px' }}>Description</th>
+              <th style={{ border: '1px solid #ddd', padding: '8px' }}>Hash</th>
             </tr>
           </thead>
           <tbody>
@@ -43,6 +45,7 @@ const HomePage: React.FC<HomePageProps> = ({ balance, onLogout }) => {
                 <td style={{ border: '1px solid #ddd', padding: '8px' }}>{tx.date}</td>
                 <td style={{ border: '1px solid #ddd', padding: '8px' }}>{tx.amount}</td>
                 <td style={{ border: '1px solid #ddd', padding: '8px' }}>{tx.description}</td>
+                <td style={{ border: '1px solid #ddd', padding: '8px' }}>{tx.hash}</td>
               </tr>
             ))}
           </tbody>
